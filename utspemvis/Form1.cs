@@ -23,6 +23,7 @@ namespace utspemvis
             this.Visible = false;
             form2 = new Form2();
             form2.Show();
+            //this.Close();
             //oper tampilan form1 ke form2
         }
 

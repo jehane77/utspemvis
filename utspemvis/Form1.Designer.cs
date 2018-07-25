@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(343, 428);
+            this.label2.Location = new System.Drawing.Point(234, 408);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 10;
@@ -60,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(343, 158);
+            this.label3.Location = new System.Drawing.Point(234, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 11;
@@ -70,7 +70,7 @@
             // 
             this.tombolMusik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tombolMusik.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tombolMusik.Location = new System.Drawing.Point(734, 12);
+            this.tombolMusik.Location = new System.Drawing.Point(533, 12);
             this.tombolMusik.Name = "tombolMusik";
             this.tombolMusik.Size = new System.Drawing.Size(54, 46);
             this.tombolMusik.TabIndex = 7;
@@ -82,7 +82,7 @@
             // 
             this.tombolStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tombolStart.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tombolStart.Location = new System.Drawing.Point(272, 277);
+            this.tombolStart.Location = new System.Drawing.Point(163, 257);
             this.tombolStart.Name = "tombolStart";
             this.tombolStart.Size = new System.Drawing.Size(109, 67);
             this.tombolStart.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.tombolExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tombolExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tombolExit.Location = new System.Drawing.Point(412, 277);
+            this.tombolExit.Location = new System.Drawing.Point(303, 257);
             this.tombolExit.Name = "tombolExit";
             this.tombolExit.Size = new System.Drawing.Size(109, 67);
             this.tombolExit.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.roundButton1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.roundButton1.Image = ((System.Drawing.Image)(resources.GetObject("roundButton1.Image")));
-            this.roundButton1.Location = new System.Drawing.Point(335, 364);
+            this.roundButton1.Location = new System.Drawing.Point(226, 344);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(36, 36);
             this.roundButton1.TabIndex = 12;
@@ -121,7 +121,7 @@
             this.roundButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.roundButton2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.roundButton2.Image = ((System.Drawing.Image)(resources.GetObject("roundButton2.Image")));
-            this.roundButton2.Location = new System.Drawing.Point(293, 364);
+            this.roundButton2.Location = new System.Drawing.Point(184, 344);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.Size = new System.Drawing.Size(36, 36);
             this.roundButton2.TabIndex = 13;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(591, 450);
             this.Controls.Add(this.roundButton2);
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.label3);
