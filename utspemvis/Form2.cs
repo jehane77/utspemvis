@@ -12,6 +12,7 @@ namespace utspemvis
 {
     public partial class Form2 : Form
     {
+        private Endless endless;
         private Form1 form1;
         public Form2()
         {
@@ -30,6 +31,13 @@ namespace utspemvis
             this.Close();
             form1.Visible = true;
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            endless = new Endless();
+            this.Close();
+            endless.Visible = true;
         }
     }
 }

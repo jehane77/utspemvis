@@ -31,3 +31,5 @@ C:\Users\Socrates\source\repos\utspemvis1\utspemvis\obj\Debug\utspemvis.csproj.G
 C:\Users\Socrates\source\repos\utspemvis1\utspemvis\obj\Debug\utspemvis.csproj.CoreCompileInputs.cache
 C:\Users\Socrates\source\repos\utspemvis1\utspemvis\obj\Debug\utspemvis.exe
 C:\Users\Socrates\source\repos\utspemvis1\utspemvis\obj\Debug\utspemvis.pdb
+C:\Users\Socrates\source\repos\utspemvis1\utspemvis\bin\Debug\Database.mdb
+C:\Users\Socrates\source\repos\utspemvis1\utspemvis\obj\Debug\utspemvis.Endless.resources
