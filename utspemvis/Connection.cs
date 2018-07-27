@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace utspemvis
 {
@@ -13,15 +14,50 @@ namespace utspemvis
     {
         //random function
         static Random rand = new Random();
+        public static int a;
+        
+        public string soal = "";
+        public string jawab = "";
+        public string resSoal;
+        public string fullPath;
 
-        //get random into int
-        public static int a = rand.Next(2, 51);
+        public void b()
+        {
+
+            a = rand.Next(2, 51);
+            int c = a;
+            //connection to database, DO NOT MESS WITH THIS
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/Database.mdb");
+
+            //querry for database, DO NOT MESS IF U DONT UNDERSTAND
+            OleDbCommand cmd = new OleDbCommand("SELECT Jawaban, Resource FROM Table1 WHERE ID = '" + c + "'", con);
+
+            //get path to image
+            
+            string path1 = @"../../Resources/";
+            fullPath = Path.GetFullPath(path1);
+
+            //open connection
+            con.Open();
+
+            //read from database
+            OleDbDataReader dr = cmd.ExecuteReader();
+            dr.Read();
+
+            //insert data from database to var
+            soal = dr.GetString(0);
+            resSoal = dr.GetString(1);
+
+            //close read and connection
+            dr.Close();
+            //cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
         
-        //connection to database, DO NOT MESS WITH THIS
-        public static OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/Database.mdb");
-        
-        //querry for database, DO NOT MESS IF U DONT UNDERSTAND
-        public static OleDbCommand cmd = new OleDbCommand("SELECT Jawaban, Resource FROM Table1 WHERE ID = '" + a + "'", con);
+
+
 
     }
 }
