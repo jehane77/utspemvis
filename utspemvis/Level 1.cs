@@ -13,7 +13,12 @@ namespace utspemvis
     public partial class Level_1 : Form
     {
         int score, life = 5;
-        int count = 0;
+
+        // 5 count (sub-level) / level
+        //level 1 start from count=1
+        //level 2 start from count=6
+        //only working with fixed database lowest ID value 1
+        public static int count = 0;
         Connection con = new Connection();
         
         //initialize 
@@ -98,7 +103,7 @@ namespace utspemvis
                     {
                         MessageBox.Show("Level Selesai");
 
-                        //closing form level
+                        //closing form level and back to Form2
                         this.Close();
                         form2.Visible = true;
                     }

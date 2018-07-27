@@ -60,7 +60,7 @@ namespace utspemvis
         }
 
         //level connection function
-        int level = 2; //2 means the begining(lowest value) of DB => ID column
+        int level = Level_1.count; //count is based level start
         public void levelConnection()
         {
             
