@@ -40,5 +40,12 @@ namespace utspemvis
             this.Close();
             endless.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Level_1 level_1 = new Level_1();
+            this.Close();
+            level_1.Visible = true;
+        }
     }
 }

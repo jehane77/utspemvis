@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace utspemvis
 {
-    public partial class Endless : Form
+    public partial class Level_1 : Form
     {
         int score, life = 5;
-        
+        int count = 0;
         Connection con = new Connection();
-
+        
         //initialize 
         void init()
         {
             //call connection function
-            con.endlessConnection();
+            con.levelConnection();
 
             //load pict from (path)
             pictureBox1.Refresh();
@@ -31,11 +31,12 @@ namespace utspemvis
             label1.Text = Convert.ToString(con.soal); //feel free to delete
 
             //display current life
-            label2.Text = "Jumlah Hati "+life;
+            label2.Text = "Jumlah Hati " + life;
 
             textBox1.Text = "";
         }
 
+        //reset component
         void delete()
         {
             con.resSoal = "";
@@ -45,27 +46,27 @@ namespace utspemvis
             textBox1.Text = "";
         }
 
-        public Endless()
+        public Level_1()
         {
             //happend before Form load
             InitializeComponent();
-            
+
             //call init function
             init();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            //Call Something From Form2 
+            Form2 form2 = new Form2();
+
+            
+
             //lowercase text from textbox
             con.jawab = textBox1.Text.ToLower();
 
             //error handling
-            if(con.jawab == "")
+            if (con.jawab == "")
             {
                 MessageBox.Show("Jawaban Tidak Boleh Kosong");
             }
@@ -77,17 +78,33 @@ namespace utspemvis
                 if (con.jawab == con.soal) //compare soal with jawab
                 {
                     MessageBox.Show("Jawaban Benar");
-
-                    //add score
                     score = score + 1;
                     label3.Text = "Jumlah Score " + score;
 
-                    //reset component
-                    delete();
+                    count = count + 1;
                     
-                    //InitializeComponent();
-                    init();
+                    //proceed to next level
+                    if(count < 5)
+                    {
+                        //call reset component
+                        delete();
+
+                        //re initialize
+                        init();
+                    }
+
+                    //level finnished
+                    else
+                    {
+                        MessageBox.Show("Level Selesai");
+
+                        //closing form level
+                        this.Close();
+                        form2.Visible = true;
+                    }
+                    
                 }
+
                 else
                 {
                     //false condition
@@ -105,16 +122,12 @@ namespace utspemvis
                     {
                         MessageBox.Show("Anda Kalah");
 
-                        //closing form endless
-                        Form2 form2 = new Form2();
+                        //closing form level
                         this.Close();
                         form2.Visible = true;
                     }
-
                 }
             }
-
-            
         }
     }
 }
